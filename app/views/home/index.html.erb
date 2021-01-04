@@ -1,0 +1,13 @@
+
+<div class="conteiner">
+	<h1>BOOKSHELF</h1>
+	<br>
+	<% if user_signed_in? %>
+		<h3>Nice to see you! <br><%= link_to "Go to the list", books_path %></h3>
+	<% else %>
+		<h3><%= link_to "Create an account", new_user_registration_path %> to create your own read list</h3>
+		<br>
+		<h3>If you already have an account,<br> <%= link_to "sign in", new_user_session_path %> to access your book list</h3>
+	<% end %>
+</div>
+
