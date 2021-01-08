@@ -7,7 +7,11 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.order(params[:sort])
+    if sort_column and sort_direction
+      @books = Book.order(sort_column + " " + sort_direction)
+    else
+      @books = Book.all()
+    end
   end
 
   # GET /books/1
@@ -80,6 +84,14 @@ class BooksController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
       params.require(:book).permit(:title, :author, :description, :user_id)
+    end
+
+    def sort_column
+      Book.column_names.include?(params[:sort]) ? params[:sort] : nil
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : nil
     end
 
 end

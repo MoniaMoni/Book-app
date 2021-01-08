@@ -30,8 +30,7 @@
   </tbody>
 </table>
 
-
-<p><%= link_to "Title A-Z", :sort => "title" %></p>
-<p><%= link_to "Author A_Z", :sort => "author" %></p>
+<p><%= sortable "title" %></p>
+<p><%= sortable "author" %></p>
 
 <%= link_to 'Add New Book', new_book_path, class:"btn btn-outline-dark" %>
