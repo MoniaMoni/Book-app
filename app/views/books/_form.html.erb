@@ -24,6 +24,9 @@
       <div class="field">
         <%= form.text_area :description, class:"form-control", placeholder:'Book description' %>
       </div>
+      <div class="field">
+        <%= form.text_field :year_of_publishment, class:"form-control", placeholder:'Year Of Publishment' %>
+      </div>
         <br>
       <div class="field">
         <%= form.number_field :user_id, id: :book_user_id, class:"form-control", value: current_user.id, type: :hidden %>

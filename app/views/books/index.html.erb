@@ -10,6 +10,7 @@
       <th>Title</th>
       <th>Author</th>
       <th>Description</th>
+      <th>Year Of Publishment</th>
       <th colspan="2"></th>
     </tr>
   </thead>
@@ -21,6 +22,7 @@
           <td><strong><%= link_to book.title, book %></strong></td>
           <td><%= book.author %></td>
           <td><%= book.description %></td>
+          <td><%= book.year_of_publishment %></td>
           <!-- <td><%= link_to 'Show', book %></td> -->
           <td><%= link_to 'Edit', edit_book_path(book), class:"btn btn-outline-dark" %></td>
           <td><%= link_to 'Delete', book, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-dark" %></td>
