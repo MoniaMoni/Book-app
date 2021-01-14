@@ -6,5 +6,4 @@ module BooksHelper
 	  link_to title, {:sort => column, :direction => direction}
 	end
 
-
 end
