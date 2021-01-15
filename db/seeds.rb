@@ -1,10 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
 Genre.create name: "Fantasy"
 Genre.create name: "Sci-Fi"
 Genre.create name: "Mystery"
@@ -12,3 +7,16 @@ Genre.create name: "Thriller"
 Genre.create name: "Romance"
 Genre.create name: "Westerns"
 Genre.create name: "Contemporary"
+
+(1..50).each do |id|
+  Book.create!(
+    id: id,
+    title: Faker::Book.title,
+    author: Faker::Book.author,
+    description: Faker::Books::Dune.quote,
+    user_id: 1,
+    year_of_publishment: (Faker::Number.between(from: 1900, to: 2021)).to_s,
+    genre_id: rand(1..7),
+    edition: %w[Paper Ebook Audiobook].sample
+  )
+end

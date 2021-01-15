@@ -27,6 +27,7 @@
           <td><%= book.year_of_publishment %></td>
           <td><%= book.genre.name %></td>
           <td><%= book.edition %></td>
+
           <!-- <td><%= link_to 'Show', book %></td> -->
           <td><%= link_to 'Edit', edit_book_path(book), class:"btn btn-outline-dark" %></td>
           <td><%= link_to 'Delete', book, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-dark" %></td>
