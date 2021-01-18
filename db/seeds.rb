@@ -7,6 +7,7 @@ Genre.create name: "Thriller"
 Genre.create name: "Romance"
 Genre.create name: "Westerns"
 Genre.create name: "Contemporary"
+User.first_or_create!(email: "test@test.pl", password: "password")
 
 (1..50).each do |id|
   Book.create!(

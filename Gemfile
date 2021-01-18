@@ -7,6 +7,8 @@ ruby '2.7.2'
 gem 'rails', '6.0.0'
 # Use Puma as the app server
 gem 'puma', '3.12.1'
+gem 'pg'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '5.1.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -22,15 +24,19 @@ gem 'jbuilder', '2.9.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
+gem 'rake'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'devise', '~> 4.7', '>= 4.7.3'
 
 gem 'faker'
+gem 'chartkick'
+gem 'groupdate'
+gem 'chart-js-rails'
+gem 'reports_kit'
+gem 'jquery-rails'
 
 group :development, :test do
-  gem 'sqlite3', '1.4.1'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
