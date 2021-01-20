@@ -994,11 +994,13 @@ UC/10
     </sequence>
     <table id="34" parent="18" name="ar_internal_metadata">
       <ObjectId>16584</ObjectId>
+      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
       <StateNumber>501</StateNumber>
     </table>
     <table id="35" parent="18" name="books">
       <ObjectId>16594</ObjectId>
+      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
       <StateNumber>508</StateNumber>
     </table>

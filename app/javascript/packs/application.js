@@ -11,7 +11,7 @@ require("channels")
 
 require("chartkick")
 require("chart.js")
-//= require Chart.min
+
 //= require reports_kit/application
 //= require_tree
 // Uncomment to copy all static images under ../images to the output folder and reference
