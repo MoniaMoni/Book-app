@@ -1,0 +1,20 @@
+measure: book
+filters:
+#  - title
+##  - user_id
+##  - genre
+##  - year_of_publishment
+dimensions:
+  #  - created_at
+  - user
+  - genre
+
+#  - author
+##chart:
+##  options:
+##    scales:
+##      xAxes:
+##        - stacked: true
+##      yAxes:
+##        - stacked: true
+

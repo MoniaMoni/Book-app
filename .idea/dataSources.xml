@@ -1,28 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Rails bookapp: test" uuid="3eef6f3b-366e-4304-8e4d-9cd8df1a87f3">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\bookapp\db\test.sqlite3</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="@localhost" uuid="381ced13-a435-48dc-ada8-16b18a5582c3">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="bookapp_development@localhost" uuid="024386bb-bfd4-457e-9d10-fd82c1c4cf25">
+    <data-source source="LOCAL" name="bookapp_development@localhost" uuid="6703419f-cabc-471b-bf52-190e461419ef">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/bookapp_development</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
 </project>

@@ -1,0 +1,14 @@
+data_method: MyDataMethods.books_by_author
+#chart:
+#  options:
+#    legend:
+#      display: false
+#    scales:
+#      xAxes:
+#        - scaleLabel:
+#            display: true
+#            labelString: Books
+#      yAxes:
+#        - scaleLabel:
+#            display: true
+#            labelString: Author

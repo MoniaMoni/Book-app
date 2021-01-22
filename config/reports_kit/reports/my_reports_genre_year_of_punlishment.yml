@@ -1,0 +1,19 @@
+measure: book
+filters:
+  - author
+  - title
+#  - is_featured
+  - key: created_at
+    granularity: day
+dimensions:
+  - genre
+  - year_of_publishment
+#  - author
+#chart:
+#  options:
+#    scales:
+#      xAxes:
+#        - stacked: true
+#      yAxes:
+#        - stacked: true
+order: dimension1.label asc

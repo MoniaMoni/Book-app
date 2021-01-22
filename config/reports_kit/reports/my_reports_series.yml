@@ -1,0 +1,44 @@
+series:
+  - measure:
+      key: book
+      name: Wydanie papierowe
+    filters:
+      - key: edition
+        criteria:
+          operator: equals
+          value: Paper
+    dimensions:
+      - key: created_at
+        granularity: day
+#      - author
+#      - title
+#       - genre
+  - measure:
+      key: book
+      name: Audiobook
+    filters:
+      - key: edition
+        criteria:
+          operator: equals
+          value: Audiobook
+    dimensions:
+      - key: created_at
+        granularity: day
+        #      - author
+#      - title
+#      - genre
+  - measure:
+      key: book
+      name: Ebook
+    filters:
+      - key: edition
+        criteria:
+          operator: equals
+          value: Ebook
+    dimensions:
+      - key: created_at
+        granularity: day
+#      - author
+#      - title
+#      - genre
+order: dimension1.label asc

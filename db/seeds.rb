@@ -1,17 +1,19 @@
 require 'faker'
 
-Genre.create name: "Fantasy"
-Genre.create name: "Sci-Fi"
-Genre.create name: "Mystery"
-Genre.create name: "Thriller"
-Genre.create name: "Romance"
-Genre.create name: "Westerns"
-Genre.create name: "Contemporary"
-User.first_or_create!(email: "test@test.pl", password: "password")
+# Genre.create name: "Fantasy"
+# Genre.create name: "Sci-Fi"
+# Genre.create name: "Mystery"
+# Genre.create name: "Thriller"
+# Genre.create name: "Romance"
+# Genre.create name: "Westerns"
+# Genre.create name: "Contemporary"
+# Genre.create name: "Other"
+# User.first_or_create!(email: "test@test.pl", password: "password")
 
-(1..50).each do |id|
+# (1..50).each do |id|
+ 8.times do
   Book.create!(
-    id: id,
+    # id: id,
     title: Faker::Book.title,
     author: Faker::Book.author,
     description: Faker::Books::Dune.quote,
