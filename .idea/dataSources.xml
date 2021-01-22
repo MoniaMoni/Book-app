@@ -10,11 +10,11 @@
       <jdbc-url>jdbc:sqlite:C:\bookapp\db\test.sqlite3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="@localhost" uuid="381ced13-a435-48dc-ada8-16b18a5582c3">
+    <data-source source="LOCAL" name="bookapp@localhost" uuid="381ced13-a435-48dc-ada8-16b18a5582c3">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5432/bookapp</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="bookapp_development@localhost" uuid="024386bb-bfd4-457e-9d10-fd82c1c4cf25">

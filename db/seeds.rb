@@ -9,9 +9,9 @@ Genre.create name: "Westerns"
 Genre.create name: "Contemporary"
 User.first_or_create!(email: "test@test.pl", password: "password")
 
-(1..50).each do |id|
+50.times do
   Book.create!(
-    id: id,
+    #id: id,
     title: Faker::Book.title,
     author: Faker::Book.author,
     description: Faker::Books::Dune.quote,
