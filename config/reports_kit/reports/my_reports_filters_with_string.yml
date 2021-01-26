@@ -1,0 +1,13 @@
+measure:
+  key: book
+  name: Posts With Titles Containing "Many"
+filters:
+  - key: title
+    criteria:
+      operator: contains
+      value: Many
+dimensions:
+  - author
+#  - title
+  - key: created_at
+    granularity: day

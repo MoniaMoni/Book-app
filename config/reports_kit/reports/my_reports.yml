@@ -1,3 +1,5 @@
 measure: book
 dimensions:
-  - genre
+  - user
+  - key: created_at
+    granularity: day

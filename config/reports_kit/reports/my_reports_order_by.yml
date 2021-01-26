@@ -1,0 +1,5 @@
+measure: book
+dimensions:
+  - genre
+  - user
+order: dimension1.label asc

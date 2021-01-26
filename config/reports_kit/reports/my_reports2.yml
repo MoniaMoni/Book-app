@@ -1,15 +1,8 @@
-data_method: MyReports.personal_cards
-chart:
-  options:
-    maintainAspectRatio: true
-    scales:
-      xAxes:
-      - scaleLabel:
-          display: true
-          labelString: Rok
-        stacked: true
-      yAxes:
-      - scaleLabel:
-          display: true
-          labelString: Liczba wpisów
-        stacked: true
+measure: book
+dimensions:
+#  - year_of_publishment
+#  - created_at
+  - genre
+  - key: created_at
+    granularity: day
+order: dimension1.label asc

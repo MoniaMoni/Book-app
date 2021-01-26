@@ -1,0 +1,9 @@
+measure: book
+filters:
+  - key: author
+    contextual_filters:
+      - for_author
+dimensions:
+  - key: created_at
+    granularity: day
+  - genre

@@ -1,0 +1,4 @@
+measure: book
+dimensions:
+    - title
+limit: 6
