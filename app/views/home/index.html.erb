@@ -11,7 +11,9 @@
 	<% end %>
 
 </div>
-
+<br/>
+<%= pie_chart @books.group(:genre_id).count %>
+<br/>
 
 
 <h1>All books</h1>
@@ -31,7 +33,7 @@
   </thead>
 
   <tbody>
-  <% Book.all.each do |book| %>
+  <% @books.all.each do |book| %>
     <tr>
       <td><strong><%= link_to book.title, book %></strong></td>
       <td><%= book.author %></td>

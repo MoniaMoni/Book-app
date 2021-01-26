@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_14_082327) do
+ActiveRecord::Schema.define(version: 2021_01_25_204919) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,12 +21,19 @@ ActiveRecord::Schema.define(version: 2021_01_14_082327) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
     t.string "year_of_publishment"
     t.bigint "genre_id", default: 1, null: false
     t.string "edition"
     t.index ["genre_id"], name: "index_books_on_genre_id"
-    t.index ["user_id"], name: "index_books_on_user_id"
+  end
+
+  create_table "books_users", force: :cascade do |t|
+    t.bigint "book_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["book_id"], name: "index_books_users_on_book_id"
+    t.index ["user_id"], name: "index_books_users_on_user_id"
   end
 
   create_table "genres", force: :cascade do |t|
@@ -48,4 +55,6 @@ ActiveRecord::Schema.define(version: 2021_01_14_082327) do
   end
 
   add_foreign_key "books", "genres"
+  add_foreign_key "books_users", "books"
+  add_foreign_key "books_users", "users"
 end

@@ -10,7 +10,7 @@ class BooksController < ApplicationController
     if sort_column and sort_direction
       @books = Book.order(sort_column + " " + sort_direction)
     else
-      @books = Book.all()
+      @books = current_user.books
     end
   end
 
