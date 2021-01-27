@@ -32,7 +32,7 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'faker'
 gem 'chartkick'
 gem 'groupdate'
-gem 'chart-js-rails'
+#gem 'chart-js-rails'
 gem 'reports_kit'
 gem 'jquery-rails'
 

@@ -11,9 +11,13 @@
 	<% end %>
 
 </div>
-<br/>
-<%= pie_chart @books.group(:genre_id).count %>
-<br/>
+<!--<br/>-->
+<%#= pie_chart @books.group(:genre_id).count %>
+<!--<br/>-->
+
+<div class="col-md-4">
+<canvas id="myChart" width="400" height="400"><p>Test chart</p></canvas>
+</div>
 
 
 <h1>All books</h1>

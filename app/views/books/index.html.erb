@@ -10,6 +10,8 @@
 <br>
 <%= pie_chart @books.group(:genre_id).count %>
 
+<div id='tutaj'><canvas id="myChart" width="400" height="400"><p>Test chart</p></canvas></div>
+
 <table class="table table-striped table-hover">
   <thead class="table-dark">
     <tr>

@@ -10,7 +10,6 @@ require("@rails/activestorage").start()
 require("channels")
 
 require("chartkick")
-require("chart.js")
 
 //= require reports_kit/application
 //= require_tree
@@ -20,3 +19,76 @@ require("chart.js")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+const Chart = require('chart.js')
+
+document.addEventListener('turbolinks:load', () => {
+
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: [
+                "Rosemary Sutcliff",
+                "New Title",
+                "The Skull Beneath the Skin",
+                "Pale Kings and Princes",
+                "3",
+                "The Wives of Bath"
+            ],
+            datasets: [
+                {
+                    label: "Books",
+                    data: [
+                        3,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    backgroundColor: "#1f77b4",
+                    borderColor: "#1f77b4"
+                }
+            ],
+            options: {
+                scales: {
+                    xAxes: [
+                        {
+                            gridLines: {
+                                display: false
+                            },
+                            barPercentage: 0.9,
+                            categoryPercentage: 0.9,
+                            scaleLabel: {
+                                display: true,
+                                labelString: "Title"
+                            }
+                        }
+                    ],
+                    yAxes: [
+                        {
+                            ticks: {
+                                beginAtZero: true
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: "Books"
+                            }
+                        }
+                    ]
+                },
+                legend: {
+                    labels: {
+                        usePointStyle: true
+                    }
+                },
+                maintainAspectRatio: false,
+                tooltips: {
+                    xPadding: 8,
+                    yPadding: 7
+                }
+            }
+        }
+    })
+})
