@@ -1,13 +1,24 @@
-measure: book
+measure: books_user
 filters:
-#  - title
-##  - user_id
-##  - genre
-##  - year_of_publishment
+  #  - key: book
+  #    criteria:
+  #      operator: contains
+  #      value: Many
+  - key: user_id
+    #    criteria:
+    #      operator: "="
+    #      value: 1
+    #  - key: user_id
+    criteria:
+      operator: "="
+      value: 1
 dimensions:
   #  - created_at
   - user
-  - genre
+  - key: created_at
+    granularity: day
+
+#  - genre
 
 #  - author
 ##chart:

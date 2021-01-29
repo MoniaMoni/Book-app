@@ -1,0 +1,6 @@
+measure: books_user
+dimensions:
+  - key: created_at
+    granularity: day
+  - user
+order: dimension1.label asc

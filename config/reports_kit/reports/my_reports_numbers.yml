@@ -1,0 +1,27 @@
+#measure:
+#  key: books_user
+#  name: Posts With More Than 5 Views
+#filters:
+#  - key: user_id
+#    criteria:
+#      operator: "="
+#      value: 12
+#dimensions:
+#  - book
+#  - user
+
+measure:
+  key: book
+  name: Books contains "The"
+filters:
+#  - key: title
+#    criteria:
+#      operator: contains
+#      value: Night
+  - key: title
+    criteria:
+      operator: contains
+      value: good
+dimensions:
+  - title
+  - author

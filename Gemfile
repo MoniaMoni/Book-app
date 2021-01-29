@@ -35,7 +35,7 @@ gem 'groupdate'
 #gem 'chart-js-rails'
 gem 'reports_kit'
 gem 'jquery-rails'
-
+gem 'json', '~> 2.5', '>= 2.5.1'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

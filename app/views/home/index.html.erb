@@ -10,13 +10,21 @@
 		<h3>If you already have an account,<br> <%= link_to "sign in", new_user_session_path %> to access your book list</h3>
 	<% end %>
 
+
+  <div>
+    <%= content_tag :div, class: "temp_information", data: {temp: @temp} do %>
+    <% end %>
+    <%#= @temp %>
+    TU JESTEM
+  </div>
 </div>
 <!--<br/>-->
 <%#= pie_chart @books.group(:genre_id).count %>
 <!--<br/>-->
 
 <div class="col-md-4">
-<canvas id="myChart" width="400" height="400"><p>Test chart</p></canvas>
+  <canvas id="myChart" width="400" height="300"><p>Test chart</p></canvas>
+<!--  <canvas id="myChart" width="400" height="300"><p>Test chart</p></canvas>-->
 </div>
 
 
