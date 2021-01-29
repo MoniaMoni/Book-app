@@ -92,4 +92,3 @@ document.addEventListener('turbolinks:load', () => {
         }
     })
 })
-
