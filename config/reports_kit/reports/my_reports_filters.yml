@@ -1,6 +1,6 @@
 measure:
   key: book
-  name: genre books user
+  name: genre books users
 filters:
   - key: title
     criteria:
@@ -16,7 +16,7 @@ filters:
 #      value: 2
 
 dimensions:
-  - user
+  - users
   - title
 #  - genre
 #  - author

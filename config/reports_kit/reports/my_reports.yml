@@ -1,5 +1,5 @@
 measure: book
 dimensions:
-  - user
+  - users
   - key: created_at
     granularity: day
