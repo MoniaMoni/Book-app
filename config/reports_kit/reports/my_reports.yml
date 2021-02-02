@@ -2,4 +2,4 @@ measure: books_user
 dimensions:
   - user
   - key: updated_at
-    granularity: day
+#    granularity: day

@@ -1,14 +1,7 @@
 measure: book
 filters:
-#  - author
-#  - title
-#  - created_at
-#  - key: created_at
-#    granularity: day
+
 dimensions:
   - key: created_at
     granularity: day
-#  - created_at
-#    granularity: day
-#  - author
   - genre

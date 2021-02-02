@@ -24,71 +24,29 @@ const Chart = require('chart.js')
 
 document.addEventListener('turbolinks:load', () => {
 
-    var ctx = document.getElementById('myChart');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: [
-                "Rosemary Sutcliff",
-                "New Title",
-                "The Skull Beneath the Skin",
-                "Pale Kings and Princes",
-                "3",
-                "The Wives of Bath"
-            ],
-            datasets: [
-                {
-                    label: "Books",
-                    data: [
-                        3,
-                        2,
-                        2,
-                        2,
-                        2,
-                        2
-                    ],
-                    backgroundColor: "#1f77b4",
-                    borderColor: "#1f77b4"
-                }
-            ],
-            options: {
-                scales: {
-                    xAxes: [
-                        {
-                            gridLines: {
-                                display: false
-                            },
-                            barPercentage: 0.9,
-                            categoryPercentage: 0.9,
-                            scaleLabel: {
-                                display: true,
-                                labelString: "Title"
-                            }
-                        }
-                    ],
-                    yAxes: [
-                        {
-                            ticks: {
-                                beginAtZero: true
-                            },
-                            scaleLabel: {
-                                display: true,
-                                labelString: "Books"
-                            }
-                        }
-                    ]
-                },
-                legend: {
-                    labels: {
-                        usePointStyle: true
-                    }
-                },
-                maintainAspectRatio: false,
-                tooltips: {
-                    xPadding: 8,
-                    yPadding: 7
-                }
-            }
-        }
-    })
+
+    const myReport = document.querySelector("#myChart").dataset.chart;
+
+    const chartUrl = "http://localhost:3000/reports_kit/reports.json?report_params[key]=" + myReport + "&properties={}";
+
+    fetch(chartUrl)
+        .then(function(response) {
+             response.json().then(data => {
+                // do something with your data
+                var chartData = data.data.chart_data;
+                //var datasets = chartData.datasets;
+                // var labels = chartData.labels;
+                // var options = chartData.options;
+
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'bar',
+                    data: chartData,
+                    //options: options
+                });
+            });
+        })
+        .catch(function() {
+            // This is where you run code if the server returns any errors
+            });
 })
