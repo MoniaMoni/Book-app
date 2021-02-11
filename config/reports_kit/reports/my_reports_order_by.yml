@@ -1,7 +1,7 @@
-measure: book
+measure: user
 dimensions:
 #  - key: created_at
 #    granularity: day
-  - genre
+  - book_genre
 #  - user
 order: dimension1.label asc

@@ -1,3 +1,23 @@
+<div class="conteiner md-3">
+	<div class="card mb-3">
+		<%= form_tag('/', method: "get") do %>
+			<div class="card-title">
+				<%= label_tag 'Type of chart' %>
+			</div>
 
+		    <div class="card-body">
+			    <%= select_tag(:kind, options_for_select([['Bar chart', 0], ['Doughnut chart', 1], ['Pie chart', 2], ['Line chart', 3]]), selected: :kind, class: "btn btn-outline-dark dropdown-toggle") %>
+			    <%= submit_tag("Load chart", class: 'btn btn-outline-dark btn-sm') %>
+		    </div>
+		<% end %>
+	</div>
+<!-- 
+	<div class="card mb-3">
+		<%= form_tag("/", method: "get") do %>
+	        <%= text_field_tag(:q, @text, class: 'form-control') %>
+	        <%= submit_tag("Submit", class: 'btn btn-outline-dark btn-sm') %>
+		<% end %>	
+	</div> -->
 
-<%= 'opcje' %>
+</div>
+

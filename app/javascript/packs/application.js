@@ -24,10 +24,11 @@ const Chart = require('chart.js')
 
 document.addEventListener('turbolinks:load', () => {
 
-
+    // http://localhost:3000/reports_kit/reports.json?report_params[key]=my_reports&properties={}
     const myReport = document.querySelector("#myChart").dataset.chart;
-
     const chartUrl = "http://localhost:3000/reports_kit/reports.json?report_params[key]=" + myReport + "&properties={}";
+
+    const chartType = document.querySelector("#myChart").dataset.chart_type;
 
     fetch(chartUrl)
         .then(function(response) {
@@ -40,7 +41,7 @@ document.addEventListener('turbolinks:load', () => {
 
                 var ctx = document.getElementById('myChart').getContext('2d');
                 var chart = new Chart(ctx, {
-                    type: 'bar',
+                    type: chartType,
                     data: chartData,
                     //options: options
                 });
