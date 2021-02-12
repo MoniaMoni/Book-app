@@ -43,6 +43,7 @@ document.addEventListener('turbolinks:load', () => {
                 var chart = new Chart(ctx, {
                     type: chartType,
                     data: chartData,
+                    // labels: labels
                     //options: options
                 });
             });
