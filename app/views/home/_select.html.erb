@@ -7,6 +7,9 @@
 
 		    <div class="card-body">
 			    <%= select_tag(:kind, options_for_select([['Bar chart', 0], ['Doughnut chart', 1], ['Pie chart', 2], ['Line chart', 3]]), selected: :kind, class: "btn btn-outline-dark dropdown-toggle") %>
+
+			    <%= select_tag(:rep, options_for_select([['Amount of books per user', 0], ['raport 2', 1], ['raport 3', 2], ['Number of books by genre and date of addition', 3]]), selected: :rep, class: "btn btn-outline-dark dropdown-toggle") %>
+
 			    <%= submit_tag("Load chart", class: 'btn btn-outline-dark btn-sm') %>
 		    </div>
 		<% end %>
