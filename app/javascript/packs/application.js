@@ -44,7 +44,16 @@ document.addEventListener('turbolinks:load', () => {
                     type: chartType,
                     data: chartData,
                     // labels: labels
-                    //options: options
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero:true
+                                }
+                            }]
+                        }
+                    }
+
                 });
             });
         })

@@ -7,5 +7,29 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/bookapp_development</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Rails bookapp: production" uuid="2d5f05db-6bb0-4e37-9c7f-c4d2660e3af6">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/bookapp_production</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails bookapp: test" uuid="8a4ff11c-a48c-4195-81ef-14220623d447">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/bookapp_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails bookapp: development" uuid="08551a03-87c8-4775-a225-605e280bcad6">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/bookapp_development</jdbc-url>
+    </data-source>
   </component>
 </project>

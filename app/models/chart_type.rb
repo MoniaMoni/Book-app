@@ -1,0 +1,2 @@
+class ChartType < ApplicationRecord
+end
