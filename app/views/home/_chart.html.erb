@@ -1,1 +1,10 @@
-<canvas id="myChart" data-chart="<%= @data %>" data-chart_type="<%= @chart_type %>" width="400" height="300"><p>Test chart</p></canvas>
+
+<div class="card">
+  <div class="card-body">
+    <canvas id="myChart" data-chart="<%= @report %>" data-chart_type="<%= @chart_type %>" width="400" height="300"><p>Test chart</p></canvas>
+  </div>
+
+  <h4 class="card-title">
+    <%= @description %>
+  </h4>
+</div>

@@ -27,7 +27,7 @@ require 'faker'
 #     )
 #   end
 # end
-Report.create! name:'my_reports'
-Report.create! name:'my_reports2'
-Report.create! name:'my_reports_filters2'
-Report.create! name:'my_reports_series'
+Report.create! name:'my_reports', description:'Amount of books per user'
+Report.create! name:'my_reports2', description:'Books genre'
+Report.create! name:'my_reports_filters2', description:'Date of adding the book'
+Report.create! name:'my_reports_series', description:'Number of books by genre and date of addition'

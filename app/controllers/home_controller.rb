@@ -23,19 +23,25 @@ class HomeController < ApplicationController
     # pobieranie parametrów z tabeli
 
     @chart_types = ChartType.all
-    kind = params[:kind].presence #|| 0
-
-    @chart_type = @chart_types[kind.to_i].name
-
-
     @reports = Report.all
-    rep = params[:rep].presence
 
-    @data = @reports[rep.to_i].name
 
-    if params[:q].present?
-      @text = "hello #{params[:q]}!"
-    end
+    # kind = params[:kind].presence ||
+    # @chart_type = @chart_types[kind.to_i-1].name
+
+    @chart_type = ChartType.find(params[:kind] || 1)&.name
+    # @chart_type = ChartType.find(params[:kind] || 1)&.name
+
+
+    # rep = params[:rep].presence || 0
+    # @report = @reports[rep.to_i].name
+
+    @report = Report.find(params[:rep] || 1)&.name
+    @description = Report.find(params[:rep] || 1)&.description
+
+    # if params[:q].present?
+    #   @text = "hello #{params[:q]}!"
+    # end
   end
 
 end
